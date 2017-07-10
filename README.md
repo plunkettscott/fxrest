@@ -1,6 +1,5 @@
 
-# FXRest
-FXRest is a REST/Model Client for FiveM FXServer
+# FXRest by Scott
+FXRest is a REST/Model Client for FiveM FXServer.
 
-## Table of Contents
-- [Quick Install Guide](docs/Installation.md)
+__Plaease utilize the Wiki available here: [FXRest Wiki](wiki)__
