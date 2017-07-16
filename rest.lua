@@ -289,23 +289,17 @@ REST.Delete             = function(self, callback, data, method)
                           end
 
 REST.Create             = function(self, callback, data, method)
-                            print('running...')
                             if data == nil then
                               data = self.props
-                              print('props broadcasted.')
                             else
                               for k,v in pairs(data) do
-                                print('setting data ' .. k .. ' to ' .. v)
                                 self.props[k] = v
                               end
                               data = self.props
-                              print('set')
                             end
                             if method == nil then
                               method = RESTConfig.DefCreateMethod
-                              print('method set')
                             end
-                            print('http go')
                             PerformHttpRequest(
                               self.path,
                               function(code, text, headers)
@@ -321,7 +315,6 @@ REST.Create             = function(self, callback, data, method)
                               json.encode(data),
                               RESTConfig.Headers
                             )
-                            print('http was executed. running async like.')
                             self.props = {}
                             return self
                           end
